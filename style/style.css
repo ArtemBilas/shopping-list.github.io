@@ -1,0 +1,152 @@
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    height: 100%;
+}
+h1{
+    display: inline-block;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+button{
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    outline: none;
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+button:hover{
+    border: 1px solid rgb(100, 100, 100);
+    transition: border 0.5s;
+}
+span{
+    padding: 5px;
+}
+.wrapper{
+    height: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    flex: 1 0 auto;
+}
+nav {
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+nav span{
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+nav img{
+    width: 30px;
+    border-radius: 50%;
+}
+nav img:hover{
+    background-color: rgb(228, 227, 227) ;
+    transition: background-color 0.5s;
+}
+.app{
+    text-align: center;
+    width: 70%;
+    margin: 50px auto;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.14);
+}
+.main-card{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.add-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.list-items{
+    width: 100%;
+}
+input{
+    width: 90%;
+    padding: 7px ;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+}
+ul{
+    list-style: none;
+    text-align: left; 
+    width: 100%;
+    margin: 25px auto;
+}
+ul li{
+   display: flex;
+   justify-content: space-between;
+   flex-flow: row wrap;
+   align-items: center;
+   padding: 5px;
+}
+
+.btn-bold{
+    font-weight: bold ;
+}
+.btn-marker{
+    background-color: rgb(255, 247, 170);
+    border-radius: 5px;
+}
+.btn-important{
+    color: tomato;
+}
+.btn-line-through{
+    text-decoration: line-through;
+}
+.add:hover{
+    background-color: rgb(220, 255, 166);
+    transition: background-color 0.5s;
+}
+.delete:hover{
+    background-color: rgb(252, 155, 138);
+    transition: background-color 0.5s;
+}
+footer{
+    width: 90%;
+    margin: 0 auto;
+    border-top: 2px solid black;
+    text-align: center;
+    flex-shrink: 0;
+}
+footer p{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+footer span{
+    border: 2px solid black;
+    background-color: rgb(255, 255, 164);
+    text-transform: none;
+    border-radius: 5px;
+}
+
