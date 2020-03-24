@@ -1,14 +1,31 @@
 let input = document.querySelector('input'),
     btnAddItem = document.querySelector('button'),
-    ul = document.querySelector('ul')
+    ul = document.querySelector('ul'),
     dot = "	&#9675;";
 
+    window.addEventListener('load',function(){
+
+        for(let i in this.localStorage){
+            if(typeof this.localStorage[i] ==="string"){
+                let idListItem = i;
+                    input.value = this.localStorage.getItem(i);
+                    createListItem(idListItem,input.value)
+            }
+        }
+
+    });
 
     btnAddItem.addEventListener('click', function () {
 
-        let value = input.value.trim();
-        let btnBold = document.querySelector('.btn-bold');
+        let idListItem = Date.now();
+            createListItem(idListItem);
+            
+    });
 
+    function createListItem(idListItem){
+
+        let value = input.value.trim();
+        
         if (value !== '') {
             let listItem = document.createElement('li'),
                 myDiv = document.createElement('div'),
@@ -40,6 +57,7 @@ let input = document.querySelector('input'),
                 btnLineThrough.classList.add('btn-line-through');
 
                 btnDelete.onclick = () => {
+                    localStorage.removeItem(idListItem);
                     ul.removeChild(listItem);
                 }
                 
@@ -60,6 +78,7 @@ let input = document.querySelector('input'),
                 }
 
                 mySpan.innerHTML = `${dot} ${value}`;
+                localStorage.setItem(idListItem,value);
                 listItem.appendChild(mySpan);
                 myDiv.appendChild(btnBold);
                 myDiv.appendChild(btnMarker)
@@ -73,8 +92,7 @@ let input = document.querySelector('input'),
         } else {
             value = '';
         }
-
-    });
+    }
 
     
 
